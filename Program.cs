@@ -71,35 +71,47 @@ class Program
 
     static void Main(string[] args)
     {
-        string city1 = GetCity("Введите название первого города: ");
-        string city2 = GetCity("Введите название второго города: ");
+         bool exit = false;
 
-        (double lat1, double lon1) = cities[city1];
-        (double lat2, double lon2) = cities[city2];
+ while (!exit)
+ {
+     string city1 = GetCity("Введите название первого города: ");
+     string city2 = GetCity("Введите название второго города: ");
 
-        Console.WriteLine("Выберите метод расчета расстояния:");
-        Console.WriteLine("1. По прямой");
-        Console.WriteLine("2. В объезд");
-        string choice = Console.ReadLine();
+     (double lat1, double lon1) = cities[city1];
+     (double lat2, double lon2) = cities[city2];
 
+     Console.WriteLine("Выберите метод расчета расстояния:");
+     Console.WriteLine("1. По прямой");
+     Console.WriteLine("2. В объезд");
+     string choice = Console.ReadLine();
 
-        double distance = 0;
+     double distance = 0;
 
-        if (choice == "1")
-        {
-            distance = CalculateDistance(lat1, lon1, lat2, lon2);
-            Console.WriteLine($"Расстояние по прямой между {city1} и {city2}: {distance:F2} км");
-        }
-        else if (choice == "2")
-        {
-            // Здесь можно реализовать алгоритм для расчета расстояния по дороге
-            // Для простоты будем использовать заглушку
-            distance = CalculateRoadDistance(city1, city2);
-            Console.WriteLine($"Расстояние в объезд между {city1} и {city2}: примерно {distance} км ");
-        }
-        else
-        {
-            Console.WriteLine("Некорректный выбор метода.");
+     if (choice == "1")
+     {
+         distance = CalculateDistance(lat1, lon1, lat2, lon2);
+         Console.WriteLine($"Расстояние по прямой между {city1} и {city2}: {distance:F2} км");
+     }
+     else if (choice == "2")
+     {
+         // Здесь можно реализовать алгоритм для расчета расстояния по дороге
+         // Для простоты будем использовать заглушку
+         distance = CalculateRoadDistance(city1, city2);
+         Console.WriteLine($"Расстояние в объезд между {city1} и {city2}: примерно {distance} км ");
+     }
+     else
+     {
+         Console.WriteLine("Некорректный выбор метода.");
+     }
+
+     Console.WriteLine("Хотите продолжить расчет? (Да/Нет)");
+     string continueChoice = Console.ReadLine();
+
+     if (continueChoice.ToLower() != "да")
+     {
+         exit = true;
+     }
         }
     }
 
