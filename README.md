@@ -9,11 +9,11 @@
 <strong>Условия:</strong>
 <ul>
 <li>Установленный .NET SDK (Software Development Kit).</li>
-<li>Visual Studio (или другая IDE, поддерживающая проекты .NET) <a href="https://visualstudio.microsoft.com/ru/downloads/">Ссылка на скачивание</a></li>
+<li>Visual Studio (или другая IDE, поддерживающая проекты .NET) <a href="https://visualstudio.microsoft.com/ru/downloads/">Ссылка на скачивание Visual Studio </a></li>
 </ul>
 <strong>Установка:</strong>
 <ul>
-<li>Скачайте исходный код проекта с GitHub: <a href="https://github.com/DashaIvanova17/CityDistance">Ссылка на репозиторий</a></li>
+<li>Скачайте исходный код проекта с GitHub: <a href="https://github.com/DashaIvanova17/CityDistance/blob/master/Program.cs">Ссылка на скачивание исходного кода</a></li>
 <li>Распакуйте архив в удобное для Вас место.</li>
 <li>Откройте папку с проектом и запустите файл.</li>
 </ul>
